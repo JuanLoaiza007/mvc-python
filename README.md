@@ -1,8 +1,25 @@
 # Personalización del patrón Modelo Vista Controlador en Python
 
+## Introduccion
+
 Este repositorio está destinado a alojar una implementación personalizada del patrón Modelo Vista Controlador (MVC) en Python.
 
 La idea es separar la lógica de negocio de la interfaz de usuario, permitiendo así la creación de interfaces directas o indirectas con programas externos como Qt Designer/Qt Creator. Para este ejemplo, se utiliza Qt 5 Designer para generar imágenes ".ui" que luego se transforman a archivos ".py" utilizando el miniprograma "_uitopy.py".
+
+## Caracteristicas
+**Implementación básica del Patrón Modelo Vista Controlador (MVC)**
+- Organización modular: La aplicación sigue el patrón de diseño MVC, lo que permite separar claramente la lógica de negocio, la interfaz de usuario y la gestión de eventos.
+- Mantenimiento simplificado: La estructura MVC facilita la mantenibilidad del código al dividir la aplicación en componentes independientes y reutilizables.
+- Escalabilidad: Al seguir el patrón MVC la aplicación es más escalable, lo que significa que es más fácil agregar nuevas funcionalidades o realizar cambios sin afectar otras partes del sistema.
+
+**Uso de PyQt5**
+- Interfaz gráfica de usuario (GUI) robusta: PyQt5 proporciona una amplia gama de widgets y herramientas para crear interfaces de usuario dinámicas y atractivas.
+- Integración fácil con Qt Designer: La combinación de PyQt5 con Qt Designer permite diseñar rápidamente interfaces de usuario mediante un proceso de arrastrar y soltar, y luego integrarlas fácilmente en la aplicación mediante la conversión de archivos .ui a código Python.
+
+**Implementación sin dependencias externas**
+- Autosuficiencia: La implementación se basa únicamente en las capacidades de Python y PyQt5 sin depender de librerías o módulos externos adicionales.
+- Sencillez y didactismo: Al minimizar las dependencias externas se facilita entender el código lo que contribuye a una aplicación más simple y fácil de mantener.
+- Independencia de plataforma: Al depender únicamente de Python y PyQt5 la aplicación puede ejecutarse en diversas plataformas sin necesidad de configuraciones adicionales o instalaciones 
 
 ## Contenido
 
