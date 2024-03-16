@@ -86,7 +86,9 @@ La carpeta de modelos contiene la lógica de datos y de negocio de la aplicació
 En la carpeta de vistas se encuentran las interfaces de usuario de la aplicación, esta carpeta fue la causante de que yo quisiese crear una version del mvc para python. Resulta que en español no se encuentra mucha información para generar interfaces en Python usando programas si no a punta de código, esto es genial pero no es muy rápido y tengo varios proyectos de la U pa este semestre entonces no aguanta gastar tanto tiempo posicionando cosas.
 
 Como habia mencionado, la ventaja de un mvc es que se pueden crear las interfaces con programas externos, las vistas seran independientes pero a la vez será más ágil implementarlas para que funcionen bien con el código, en esta carpeta hay un archivo muy especial:
-- **_uitopy.py:** Es un pequeño programa que hace uso del programa **pyuic5** integrado en **PyQt5**, sirve para transformar las interfaces de Qt Designer (.ui) en interfaces para python (.py) y hasta el momento ha sido genial. El miniprograma _uitopy.py tomará todos los archivos que esten en el mismo nivel de jerarquia que él y si tienen extension .ui los transformará a .py, cada vez que actualice el .ui debe ejecutar el miniprograma o no notará los cambios.
+- **_uitopy.py:** Es un pequeño programa que hace uso del programa **pyuic5** integrado en **PyQt5**, sirve para transformar las interfaces de Qt Designer (.ui) en interfaces para python (.py) y hasta el momento ha sido genial. El miniprograma _uitopy.py tomará todos los archivos que esten en el mismo nivel de jerarquia que él y si tienen extension .ui los transformará a .py.
+> [!IMPORTANT]
+> Cada vez que actualice una interfaz .ui debe ejecutar **_uitopy.py** para generar el .py, de lo contrario no notará los cambios.
 
 ### main.py
 
