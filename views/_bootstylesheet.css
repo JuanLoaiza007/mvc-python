@@ -3,7 +3,7 @@
  *  Simple Stylesheet inspired on Bootstrap for Qt Designer / Qt Creator 
  *  File: bootstylesheet.css
  *  Author: JuanLoaiza007
- *  Version: 1.0.0
+ *  Version: 1.1.0
  *
  */
 
@@ -29,6 +29,74 @@
 
 QMainWindow {
   font-family: "sans-serif";
+}
+
+/* Border Settings */
+/* Border Side Weight */
+.b-st-1 {
+  border-top: 1px solid;
+}
+.b-sb-1 {
+  border-bottom: 1px solid;
+}
+.b-sl-1 {
+  border-left: 1px solid;
+}
+.b-sr-1 {
+  border-right: 1px solid;
+}
+.b-st-2 {
+  border-top: 2px solid;
+}
+.b-sb-2 {
+  border-bottom: 2px solid;
+}
+.b-sl-2 {
+  border-left: 2px solid;
+}
+.b-sr-2 {
+  border-right: 2px solid;
+}
+.b-st-3 {
+  border-top: 3px solid;
+}
+.b-sb-3 {
+  border-bottom: 3px solid;
+}
+.b-sl-3 {
+  border-left: 3px solid;
+}
+.b-sr-3 {
+  border-right: 3px solid;
+}
+.b-st-4 {
+  border-top: 4px solid;
+}
+.b-sb-4 {
+  border-bottom: 4px solid;
+}
+.b-sl-4 {
+  border-left: 4px solid;
+}
+.b-sr-4 {
+  border-right: 4px solid;
+}
+
+/* Radius */
+.br-1 {
+  border-radius: 10px;
+}
+
+.br-2 {
+  border-radius: 15px;
+}
+
+.br-3 {
+  border-radius: 20px;
+}
+
+.br-4 {
+  border-radius: 25px;
 }
 
 /* Background colors */
@@ -270,23 +338,6 @@ QPushButton {
 }
 .btn-link:hover {
   color: #0a58ca;
-}
-
-/* Border radius */
-.br-1 {
-  border-radius: 10px;
-}
-
-.br-2 {
-  border-radius: 15px;
-}
-
-.br-3 {
-  border-radius: 20px;
-}
-
-.br-4 {
-  border-radius: 25px;
 }
 
 /* Title sizes */
