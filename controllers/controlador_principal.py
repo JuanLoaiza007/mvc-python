@@ -1,7 +1,10 @@
 # controlador_principal.py
 
+import sys
 from views.vista_principal import Ui_MainWindow
 from models.modelo_principal import modelo_principal
+from views.sm_dialog_clean import Ui_Dialog as sm_dialog_clean
+from PyQt5 import QtWidgets, QtCore
 
 
 class controlador_principal:
@@ -22,8 +25,29 @@ class controlador_principal:
 
     # Funciones especificas
     def saludar(self):
-        nombre = self.ui.txta_nombre.toPlainText()
-        print("Hola", nombre)
+        # app = QtWidgets.QApplication(sys.argv)
+        new_dialog = QtWidgets.QDialog()
+        new_ui = sm_dialog_clean()
+        new_ui.setupUi(new_dialog)
+        new_dialog.setModal(True)
+        new_dialog.show()
+
+        saludo = "Hola " + self.ui.txta_nombre.toPlainText()
+        new_ui.lbl_main_text.setText(saludo)
+        self.ui.txta_nombre.setText("")
+
+        copy_mwindow = self.MainWindow
+        self.block_focus(copy_mwindow)
+        new_dialog.exec()
+        self.unblock_focus(copy_mwindow)
+
+    def block_focus(self, window):
+        self.MainWindow.setEnabled(False)
+        self.MainWindow.setFixedSize(window.size())
+
+    def unblock_focus(self, window):
+        self.cargar(window)
+        self.MainWindow.setEnabled(True)
 
     def mostrar_sobre_nosotros(self):
         from controllers.controlador_sobre_nosotros import controlador_sobre_nosotros
