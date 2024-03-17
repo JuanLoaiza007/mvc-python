@@ -48,7 +48,7 @@ class controlador_principal:
 
     def unblock_focus(self, window):
         self.MainWindow.setMinimumSize(self.MainWindow.minimumSizeHint())
-        self.MainWindow.setMaximumSize(self.MainWindow.maximumSizeHint())
+        self.MainWindow.setMaximumSize(16777215, 16777215)
 
         self.MainWindow.setEnabled(True)
 
