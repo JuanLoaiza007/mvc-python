@@ -627,7 +627,7 @@ class Ui_MainWindow(object):
         self.btn_saludar.setProperty("class", _translate("MainWindow", "btn-primary"))
         self.frame_2.setProperty("class", _translate("MainWindow", "background-primary"))
         self.btn_sobre.setText(_translate("MainWindow", "Sobre"))
-        self.btn_sobre.setProperty("class", _translate("MainWindow", "btn-outline-light"))
+        self.btn_sobre.setProperty("class", _translate("MainWindow", "btn-outline-dark"))
 
 
 if __name__ == "__main__":

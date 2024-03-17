@@ -965,7 +965,7 @@ QLabel {
              <string>Sobre</string>
             </property>
             <property name="class" stdset="0">
-             <string>btn-outline-light</string>
+             <string>btn-outline-dark</string>
             </property>
            </widget>
           </item>
