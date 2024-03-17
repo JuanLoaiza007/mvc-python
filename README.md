@@ -45,14 +45,15 @@ Nunca escribí un botón en la creación de estas interfaces y si tienes prisa t
 
 
 ### Cambio de contenido en la misma ventana
-[![imagen.png](https://i.postimg.cc/hPFKDVKH/imagen.png)](https://postimg.cc/qgGPQhhL)
+[![imagen.png](https://i.postimg.cc/MKctDjRK/imagen.png)](https://postimg.cc/vcsW8T3p)
 Las interfaces estan implementadas en archivos .ui/.py distintos pero en esta implementación se cargan en la misma ventana.
 > [!IMPORTANT]
 > Es posible que deba ajustar los tamaños mínimos y máximos en Qt Designer para que el nuevo contenido redimensione la pantalla y no se quede con el tamaño de la anterior.
 
 ### Implementacion de Dialogos modales
+[![imagen.png](https://i.postimg.cc/hPFKDVKH/imagen.png)](https://postimg.cc/qgGPQhhL)
 Se implementa un pequeño QDialog Modal, esto significa que el dialogo tomará el enfoque de la ventana que lo llama y esta quedará esperando a que se cierre el dialogo antes de permitir realizar otra acción.
-[![imagen.png](https://i.postimg.cc/MKctDjRK/imagen.png)](https://postimg.cc/vcsW8T3p)
+
 
 ### Implementación sin dependencias externas
 - Autosuficiencia: La implementación se basa únicamente en las capacidades de Python y PyQt5 sin depender de librerías o módulos externos adicionales.
