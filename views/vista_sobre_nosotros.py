@@ -14,22 +14,49 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(422, 271)
+        MainWindow.resize(460, 300)
+        MainWindow.setMinimumSize(QtCore.QSize(460, 300))
+        MainWindow.setMaximumSize(QtCore.QSize(460, 300))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setMinimumSize(QtCore.QSize(400, 270))
+        self.centralwidget.setStyleSheet("QWidget {\n"
+"    background-color: white;\n"
+"}")
         self.centralwidget.setObjectName("centralwidget")
-        self.lbl_titulo = QtWidgets.QLabel(self.centralwidget)
-        self.lbl_titulo.setGeometry(QtCore.QRect(0, 20, 421, 24))
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.frame_3 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_3.setMaximumSize(QtCore.QSize(16777215, 59))
+        self.frame_3.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.lbl_titulo = QtWidgets.QLabel(self.frame_3)
         font = QtGui.QFont()
+        font.setFamily("sans-serif")
+        font.setPointSize(16)
         font.setBold(True)
+        font.setItalic(False)
         font.setWeight(75)
         self.lbl_titulo.setFont(font)
         self.lbl_titulo.setStyleSheet("QLabel {\n"
-"    color: rgb(7, 24, 255);\n"
+"    font: bold 16pt \"sans-serif\";\n"
+"    color: #16a085;\n"
 "}")
         self.lbl_titulo.setAlignment(QtCore.Qt.AlignCenter)
         self.lbl_titulo.setObjectName("lbl_titulo")
-        self.lbl_cuerpo = QtWidgets.QLabel(self.centralwidget)
-        self.lbl_cuerpo.setGeometry(QtCore.QRect(0, 40, 421, 171))
+        self.horizontalLayout.addWidget(self.lbl_titulo)
+        self.verticalLayout.addWidget(self.frame_3, 0, QtCore.Qt.AlignVCenter)
+        self.frame_2 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_2.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.gridLayout = QtWidgets.QGridLayout(self.frame_2)
+        self.gridLayout.setObjectName("gridLayout")
+        self.lbl_cuerpo = QtWidgets.QLabel(self.frame_2)
         font = QtGui.QFont()
         font.setBold(False)
         font.setWeight(50)
@@ -40,9 +67,40 @@ class Ui_MainWindow(object):
         self.lbl_cuerpo.setAlignment(QtCore.Qt.AlignCenter)
         self.lbl_cuerpo.setWordWrap(True)
         self.lbl_cuerpo.setObjectName("lbl_cuerpo")
-        self.btn_volver = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_volver.setGeometry(QtCore.QRect(290, 220, 115, 33))
+        self.gridLayout.addWidget(self.lbl_cuerpo, 0, 0, 1, 1)
+        self.verticalLayout.addWidget(self.frame_2)
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setSpacing(0)
+        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.frame_4 = QtWidgets.QFrame(self.frame)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.horizontalLayout_2.addWidget(self.frame_4)
+        self.frame_5 = QtWidgets.QFrame(self.frame)
+        self.frame_5.setMaximumSize(QtCore.QSize(90, 16777215))
+        self.frame_5.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.gridLayout_2 = QtWidgets.QGridLayout(self.frame_5)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.btn_volver = QtWidgets.QPushButton(self.frame_5)
+        self.btn_volver.setStyleSheet("QPushButton {\n"
+"    border-radius: 20px;\n"
+"    background-color: #16a085;\n"
+"    color: white;\n"
+"    font: bold 12pt \"sans-serif\";\n"
+"    padding: 10px 0px;\n"
+"}")
         self.btn_volver.setObjectName("btn_volver")
+        self.gridLayout_2.addWidget(self.btn_volver, 0, 0, 1, 1)
+        self.horizontalLayout_2.addWidget(self.frame_5)
+        self.verticalLayout.addWidget(self.frame)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -52,7 +110,7 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.lbl_titulo.setText(_translate("MainWindow", "Sobre esta aplicacion"))
-        self.lbl_cuerpo.setText(_translate("MainWindow", "Esta aplicacion no es más que un experimento para implementar modelo-vista-controlador y facilitar la programacion de aplicaciones grandes usando Qt Designer"))
+        self.lbl_cuerpo.setText(_translate("MainWindow", "Esta aplicacion no es más que un experimento para implementar modelo-vista-controlador y facilitar la programacion de aplicaciones grandes implementado interfaces de  Qt Designer"))
         self.btn_volver.setText(_translate("MainWindow", "Volver"))
 
 
