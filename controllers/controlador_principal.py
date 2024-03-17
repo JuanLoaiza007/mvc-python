@@ -1,10 +1,10 @@
 # controlador_principal.py
 
-import sys
+
 from views.vista_principal import Ui_MainWindow
 from models.modelo_principal import modelo_principal
 from views.sm_dialog_clean import Ui_Dialog as sm_dialog_clean
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets
 
 
 class controlador_principal:
@@ -34,11 +34,12 @@ class controlador_principal:
 
         saludo = "Hola " + self.ui.txta_nombre.toPlainText()
         new_ui.lbl_main_text.setText(saludo)
-        self.ui.txta_nombre.setText("")
 
         copy_mwindow = self.MainWindow
         self.block_focus(copy_mwindow)
         new_dialog.exec()
+
+        self.ui.txta_nombre.setText("")
         self.unblock_focus(copy_mwindow)
 
     def block_focus(self, window):
