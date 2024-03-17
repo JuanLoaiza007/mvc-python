@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/media/ihuntgore/Users/Juan/Documents/proyectos/python/qtdesigner/practica1/views/vista_sobre_nosotros.ui'
+# Form implementation generated from reading ui file '/home/ihuntgore/Escritorio/proyectos/python/qtdesigner/practica1/views/vista_sobre_nosotros.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
