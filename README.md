@@ -10,7 +10,7 @@ Ejemplo de implementación de MVC usando interfaces creadas en Qt Designer / Qt 
   - [Interfaces hechas con Qt Designer / Qt Creator](#interfaces-hechas-con-qt-designer--qt-creator)
   - [Cambio de contenido en la misma ventana](#cambio-de-contenido-en-la-misma-ventana)
   - [Implementacion de Dialogos modales](#implementacion-de-dialogos-modales)
-  - [Implementación sin dependencias externas](#implementación-sin-dependencias-externas)
+  - [Estilos predeterminados para qt designer](#estilos-predeterminados-para-qt-designer--qt-creator)
 - [Instrucciones](#instrucciones)
   - [controllers](#controllers)
   - [models](#models)
@@ -40,25 +40,30 @@ La idea es separar la lógica de negocio de la interfaz de usuario, permitiendo 
 - Escalabilidad: Al seguir el patrón MVC la aplicación es más escalable, lo que significa que es más fácil agregar nuevas funcionalidades o realizar cambios sin afectar otras partes del sistema.
 
 ### Interfaces hechas con Qt Designer / Qt Creator
-![imagen](https://github.com/JuanLoaiza007/mvc-python/assets/116226390/0a6767d6-4f63-4073-8070-7483915d6149)
+![imagen](https://github.com/JuanLoaiza007/mvc-python/assets/116226390/b2d1a654-c8c7-4de2-9119-ad4959e2f343)
+
 Nunca escribí un botón en la creación de estas interfaces y si tienes prisa también puedes hacer interfaces rápidas con Qt Designer / Qt Creator e implementarlas fácilmente en el proyecto.
 
 
 ### Cambio de contenido en la misma ventana
-[![imagen.png](https://i.postimg.cc/MKctDjRK/imagen.png)](https://postimg.cc/vcsW8T3p)
+![imagen](https://github.com/JuanLoaiza007/mvc-python/assets/116226390/82d9e9f9-fca0-4f61-8fb1-bf334f751bf8)
+
 Las interfaces estan implementadas en archivos .ui/.py distintos pero en esta implementación se cargan en la misma ventana.
 > [!IMPORTANT]
 > Es posible que deba ajustar los tamaños mínimos y máximos en Qt Designer para que el nuevo contenido redimensione la pantalla y no se quede con el tamaño de la anterior.
 
 ### Implementacion de Dialogos modales
-[![imagen.png](https://i.postimg.cc/hPFKDVKH/imagen.png)](https://postimg.cc/qgGPQhhL)
+![imagen](https://github.com/JuanLoaiza007/mvc-python/assets/116226390/1c4bb6fa-3311-4632-a48b-1334044d00d1)
+
 Se implementa un pequeño QDialog Modal, esto significa que el dialogo tomará el enfoque de la ventana que lo llama y esta quedará esperando a que se cierre el dialogo antes de permitir realizar otra acción.
 
 
-### Implementación sin dependencias externas
-- Autosuficiencia: La implementación se basa únicamente en las capacidades de Python y PyQt5 sin depender de librerías o módulos externos adicionales.
-- Sencillez y didactismo: Al minimizar las dependencias externas se facilita entender el código lo que contribuye a una aplicación más simple y fácil de mantener.
-- Independencia de plataforma: Al depender únicamente de Python y PyQt5 la aplicación puede ejecutarse en diversas plataformas sin necesidad de configuraciones adicionales o instalaciones
+### Estilos predeterminados para Qt Designer / Qt Creator
+![imagen](https://github.com/JuanLoaiza007/mvc-python/assets/116226390/2e7b2229-cbad-48e1-96f6-b908cc0cdec9)
+
+Se presenta una hoja de estilos "bootstylesheet" para cambiar los estilos por defecto por unos mejores inspirados en Bootstrap pero adaptados para las clases nativas de Qt Desinger / Qt Creator.
+> [!NOTE]
+> Esta hoja se empezó a desarrollar recientemente pero ya tiene algunos de los estilos más importantes.
 
 ## Instrucciones
 
