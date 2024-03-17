@@ -47,7 +47,9 @@ class controlador_principal:
         self.MainWindow.setFixedSize(window.size())
 
     def unblock_focus(self, window):
-        self.cargar(window)
+        self.MainWindow.setMinimumSize(self.MainWindow.minimumSizeHint())
+        self.MainWindow.setMaximumSize(self.MainWindow.maximumSizeHint())
+
         self.MainWindow.setEnabled(True)
 
     def mostrar_sobre_nosotros(self):
