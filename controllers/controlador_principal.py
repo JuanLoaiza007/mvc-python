@@ -1,10 +1,10 @@
 # controlador_principal.py
 
-
+import os
+from PyQt5 import QtWidgets, QtGui
 from views.vista_principal import Ui_MainWindow
 from models.modelo_principal import modelo_principal
 from views.sm_dialog_clean import Ui_Dialog as sm_dialog_clean
-from PyQt5 import QtWidgets
 
 
 class controlador_principal:
@@ -16,10 +16,16 @@ class controlador_principal:
         self.MainWindow.setMaximumSize(16777215, 16777215)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.MainWindow)
+        self.cargar_imagenes()
 
         # Listeners específicos
         self.ui.btn_saludar.clicked.connect(self.saludar)
         self.ui.btn_sobre.clicked.connect(self.mostrar_sobre_nosotros)
+
+    def cargar_imagenes(self):
+        pattern_image_path = os.path.abspath(
+            "./views/assets/pattern_hexagon.png")
+        self.ui.lbl_side_image.setPixmap(QtGui.QPixmap(pattern_image_path))
 
     def mostrar(self, main_window):
         self.cargar(main_window)
